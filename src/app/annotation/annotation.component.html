@@ -1,0 +1,12 @@
+<div class="annotation"
+     [style.left.px]="annotation.x"
+     [style.top.px]="annotation.y"
+     (mousedown)="startMove()"
+     (mouseup)="stopMove()"
+     (mousemove)="moving($event)">
+    <input #annotationInput *ngIf="annotation.editing" [(ngModel)]="annotation.content" (blur)="saveAnnotation()"/>
+    <span *ngIf="!annotation.editing && annotation.type === 'text'" (dblclick)="editAnnotation()">{{ annotation.content }}</span>
+    <img class="annotation-img" [src]="annotation.content" *ngIf="!annotation.editing && annotation.type === 'image'" (dblclick)="editAnnotation()">
+    <input type="file" (change)="onImageUpload($event)" *ngIf="annotation.editing" />
+    <button (click)="deleteAnnotation()">×</button>
+</div>

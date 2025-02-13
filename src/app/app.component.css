@@ -1,0 +1,28 @@
+.toolbar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.document-container {
+    position: relative;
+    overflow-y: auto;
+    height: 80vh;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.page {
+    position: relative;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 2px
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

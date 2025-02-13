@@ -1,0 +1,21 @@
+.annotation {
+    user-select: none;
+    position: absolute;
+    background: yellow;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid black;
+    cursor: move;
+}
+input {
+    width: 100px;
+}
+
+.text-input{
+    border-radius: 5px 0 0 5px;
+    border: 1px solid black;
+}
+
+.annotation-img{
+    width: 100px;
+}
